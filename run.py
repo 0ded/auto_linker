@@ -1,6 +1,5 @@
 from datetime import datetime
 from data_scheduler import *
-from time import *
 import webbrowser
 import tkinter as tk
 from tkinter import *
