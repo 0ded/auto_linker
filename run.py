@@ -21,12 +21,16 @@ if __name__ == '__main__':
     past_link = "Totallynotalink"
     dh = DataHandler("data.json")
     root = tk.Tk()
+    root.resizable(False, False)
+    root.title("auto linker")
+    root.iconbitmap("icon.ico")
+    root.protocol("WM_DELETE_WINDOW", root.iconify)
 
     text = tk.StringVar()
     text.set("insert time and link, than press 'add'\r\n use reset data to wipe all the links")
 
     row = tk.Frame(root)
-    lab = tk.Label(row, text="Please keep this window open\r\n", anchor='w')
+    lab = tk.Label(row, text="Links will be open automatically when this window is open\r\n", anchor='w')
     row.pack(side=tk.TOP,
              fill=tk.X,
              padx=5,

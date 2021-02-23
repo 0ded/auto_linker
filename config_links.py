@@ -84,6 +84,9 @@ if __name__ == '__main__':
     if not dh.is_init():
         dh = DataHandler("data.json", Timeframe("days", 7))
     root = tk.Tk()
+    root.resizable(False, False)
+    root.title("configure links")
+    root.iconbitmap("icon.ico")
 
     text = tk.StringVar()
     text.set("insert time and link, than press 'add'\r\n use reset data to wipe all the links")

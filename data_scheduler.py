@@ -6,10 +6,11 @@ class DataHandler:
     def __init__(self, path, tf=None):
         self.file = JsonHandler(path)
         if tf is not None:
-            os.remove(path)
+            try:
+                os.remove(path)
+            except:
+                pass
             self.file.write({"tf": len(tf)})
-
-        pass
 
     def append(self, data, seconds=0, minutes=0, hours=0, days=0):
         time = time_to_timeframe(self.file.get_copy()["tf"], seconds, minutes, hours, days)
